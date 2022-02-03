@@ -16,10 +16,13 @@ namespace Heist
             //Phase 6: At the beginning of the program, prompt the user to enter the difficulty level of the bank.
             Console.WriteLine($"How difficult would you like the bank to be? Choose from 1 to 10");
             //Phase 3: Store a value for the bank's difficulty level. Set this value to 100.
-            int bankDifficulty = int.Parse(Console.ReadLine());
+            int bankDifficulty = Int32.Parse(Console.ReadLine());
             // Console.Clear();
-            //Phase 2: loop part
-            for (int i = 0; i == i; i++){
+            //Phase 2: loop part: i = 0 is  your start, i = i is creating an infinite loop, i++ is your iteration. It will keep going until you break it, in this code its by not entering a name when prompted, and just hitting enter, then it prompts for the next step.
+            //Could also use a while loop, which is set up for infinite loop use
+            for (int i = 0; i == i; i++)
+            {
+                Console.WriteLine();
                 //Phase 1: Prompt the user to enter a team member's name and save that name.
                 Console.WriteLine($"Enter team member {i +1}'s name:");
                 string Name = Console.ReadLine();
@@ -30,13 +33,13 @@ namespace Heist
                 } 
                 //Phase 1: Prompt the user to enter a team member's skill level and save that skill level with the name.
                 Console.WriteLine("What is their skill level? (Enter a number between 1 and 10)");
-                int Skill = int.Parse(Console.ReadLine());
+                int Skill = Int32.Parse(Console.ReadLine());
                 //Phase 1: Prompt the user to enter a team member's courage factor and save that courage factor with the name.
                 Console.WriteLine("What is their courage level? (Enter a number between 0.0 and 2.0");
-                double Courage = int.Parse(Console.ReadLine());
+                double Courage = Int32.Parse(Console.ReadLine());
                 //Phase 1: Display the team member's information.
-                    Console.WriteLine($"Team member {i +1}'s Name: {Name}, Skill level: {Skill}, Courage level: {Courage}");
-                //Phase 2: Create a way to store several team members, see TeamMember.cs line 13
+                Console.WriteLine($"Team member {i +1}'s Name: {Name}, Skill level: {Skill}, Courage level: {Courage}");
+                //Phase 2: Create a way to store several team members, see TeamMember.cs line 14
                 var newMember = new TeamMember();
                 newMember.createTeamMember(Name, Skill, Courage);
                     // Console.WriteLine(newMember.Name);
@@ -45,7 +48,7 @@ namespace Heist
             //Phase 5: Run the scenario multiple times.
             //Phase 5: After the user enters the team information, prompt them to enter the number of trial runs the program should perform.
             Console.WriteLine($"How many times would you like to try your heist?");
-            int trials = int.Parse(Console.ReadLine());
+            int trials = Int32.Parse(Console.ReadLine());
             Console.WriteLine();
             Console.Clear();
             //Phase 2: Display each team member's information.

@@ -9,7 +9,8 @@ namespace Heist
         public string Name { get; set; }
         public int Skill { get; set; }
         public double Courage { get; set; }
-
+        
+        //createTeamMember is the Method
         public void createTeamMember (string NameInput, int SkillInput, double CourageInput)
         {
             Name = NameInput;

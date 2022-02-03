@@ -35,7 +35,7 @@ namespace Heist
                 Console.WriteLine("What is their courage level? (Enter a number between 0.0 and 2.0");
                 double Courage = int.Parse(Console.ReadLine());
                 //Phase 1: Display the team member's information.
-                    // Console.WriteLine($"Name: {Name}, Skill level: {Skill}, Courage level: {Courage}");
+                    Console.WriteLine($"Team member {i +1}'s Name: {Name}, Skill level: {Skill}, Courage level: {Courage}");
                 //Phase 2: Create a way to store several team members, see TeamMember.cs line 13
                 var newMember = new TeamMember();
                 newMember.createTeamMember(Name, Skill, Courage);
@@ -85,7 +85,7 @@ namespace Heist
                     //     Console.WriteLine("Hope you like jail.");
                     // }
                 //Phase 5:
-                Console.WriteLine($"--------------------------------");
+                Console.WriteLine("--------------------------------");
                 Console.WriteLine($"Attempt {i +1} of {trials}");
                 Console.WriteLine();
                 //Phase 4: Before displaying the success or failure message, display a report that shows: The team's combined skill level & The bank's difficulty level
